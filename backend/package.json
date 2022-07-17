@@ -1,0 +1,29 @@
+{
+  "name": "knockgo-backend-2.0",
+  "version": "1.0.0",
+  "description": "Backend de Konck & Go",
+  "main": "index.js",
+  "scripts": {
+    "dev": "Nodemon en App.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipetek-net/knockgo-backend-2.0.git"
+  },
+  "author": "Giovanni Salinas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pipetek-net/knockgo-backend-2.0/issues"
+  },
+  "homepage": "https://github.com/pipetek-net/knockgo-backend-2.0#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
