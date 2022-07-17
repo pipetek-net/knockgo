@@ -27,7 +27,7 @@ npm install
 
 ```
 cd backend
-npm start
+npm run dev
 ```
 
 ### Frontend (:3000)
