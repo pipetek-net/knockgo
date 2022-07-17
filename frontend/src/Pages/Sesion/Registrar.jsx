@@ -5,7 +5,7 @@ import React from "react";
 function SesionRegistrar() {
     return (
         <>
-        <main>
+        <main className="flex-grow-1">
             <div className="container d-flex flex-column my-5" style={{maxWidth: "35em"}}>
                 <div>
                     <h1 className="text-center">Registrarse</h1>
@@ -21,7 +21,7 @@ function SesionRegistrar() {
                             </div>
                         </div>
                         <div className="my-3">
-                            <label htmlFor="userEmail" className="form-label">Correo electronico:</label>
+                            <label htmlFor="userEmail" className="form-label">Correo electrónico:</label>
                             <input type="email" id="userEmail" className="form-control" name="userEmail" />
                         </div>
                         <div className="d-flex justify-content-between gap-3 flex-wrap my-3">
@@ -36,7 +36,7 @@ function SesionRegistrar() {
                         </div>
                         <div className="d-flex justify-content-center align-items-center gap-3">
                             <button type="submit" className="btn btn-primary">Registrarse</button>
-                            <a href="/sesion/iniciar" className="link-secondary text-decoration-none">Iniciar Sesion</a>
+                            <a href="/sesion/iniciar" className="link-secondary text-decoration-none">Iniciar Sesión</a>
                         </div>
                     </form>
                 </div>

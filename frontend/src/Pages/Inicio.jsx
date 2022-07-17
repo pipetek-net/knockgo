@@ -13,7 +13,7 @@ import review3 from '../img/review-3.jpg';
 function Inicio() {
     return (
         <>
-        <main>
+        <main className="flex-grow-1">
             <div id="carousel" className="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -45,11 +45,11 @@ function Inicio() {
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
+                    <span className="visually-hidden">Anterior</span>
                 </button>
                 <button className="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
+                    <span className="visually-hidden">Siguiente</span>
                 </button>
             </div>
             <div className="container my-5">

@@ -11,7 +11,7 @@ import portraitSalinas from '../img/nosotros/salinas.jpg';
 function Nosotros() {
     return(
         <>
-        <main>
+        <main className="flex-grow-1">
             <div className="container my-5">
                 <h3 className="text-center">¿Quienes Somos?</h3>
                 <p>Somos un equipo de cuatro estudiantes de Ingeniería en Informática de INACAP. Nos enorgullecemos por nuestro alto estándar de calidad y compromiso con la elegancia.</p>

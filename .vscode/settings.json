@@ -2,5 +2,9 @@
     "editor.insertSpaces": true,
 
     // CSpell
-    "cSpell.language": "es"
+    "cSpell.language": "es",
+    "cSpell.words": [
+        "contrátanos",
+        "escribala"
+    ]
 }

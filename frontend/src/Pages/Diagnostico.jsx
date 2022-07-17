@@ -218,7 +218,7 @@ function UpdateDeviceOther() {
 function Diagnostico() {
     return(
         <>
-            <main>
+            <main className="flex-grow-1">
                 <div className="container my-5">
                     <h1 className="mb-4 pb-3 border-bottom border-dark border-1">Diagnostico, <strong>¡es gratis!</strong></h1>
                     <div className="row">
@@ -229,7 +229,7 @@ function Diagnostico() {
                                     <select id="deviceType" className="form-select" name="deviceType" onChange={UpdateDeviceType}>
                                         <option value="none">Selecciona una opcion...</option>
                                         <option value="computador">Computador</option>
-                                        <option value="telefono">Telefono</option>
+                                        <option value="telefono">Teléfono</option>
                                     </select>
                                 </div>
                                 <div className="my-3">
@@ -245,7 +245,7 @@ function Diagnostico() {
                                     </select>
                                 </div>
                                 <div className="my-3">
-                                    <label htmlFor="deviceOther" className="form-label">Si desea agregar mas informacion, porfavor escribala aqui:</label>
+                                    <label htmlFor="deviceOther" className="form-label">Si desea agregar mas información, por favor escribala aquí:</label>
                                     <textarea id="deviceOther" className="form-control w-100 h-25" name="deviceOther" onChange={UpdateDeviceOther}></textarea>
                                 </div>
                             </form>
@@ -257,7 +257,7 @@ function Diagnostico() {
                                     <data>
                                         <option id="detailType">Tipo: <em id="detailTypeText" className="text-secondary">N/A</em></option>
                                         <option id="detailBrand">Marca: <em id="detailBrandText" className="text-secondary">N/A</em></option>
-                                        <option id="detailCategory">Categoria: <em id="detailCategoryText" className="text-secondary">N/A</em></option>
+                                        <option id="detailCategory">Categoría: <em id="detailCategoryText" className="text-secondary">N/A</em></option>
                                         <option id="detailOther">Notas: <em id="detailOtherText" className="text-secondary">N/A</em></option>
                                     </data>
                                 </div>
@@ -276,7 +276,7 @@ function Diagnostico() {
                                     <h4 className="mb-0">Precio estimado:</h4>
                                     <span id="detailPriceText" className="fs-2">$55.500</span>
                                 </div>
-                                <button type="submit" className="btn btn-primary fs-3">¡Contratanos!</button>
+                                <button type="submit" className="btn btn-primary fs-3">¡Contrátanos!</button>
                             </div>
                         </div>
                     </div>

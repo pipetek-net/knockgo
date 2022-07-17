@@ -5,7 +5,7 @@ import React from "react";
 function Descargas() {
   return (
     <>
-    <main>
+    <main className="flex-grow-1">
         <div className="container my-5">
             <div className="row">
                 <div className="col-8">
