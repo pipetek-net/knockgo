@@ -12,11 +12,12 @@ const login = async (req, res) => {
     //metodo que compara la contraseña ingresada con la contraseña hasheada en la base de datos
     bcrypt.compare(contraseña, usuario.contraseña).then((esCorrecta) => {
       if (esCorrecta) {
-        const { id, nombre } = usuario;
+        const { id, nombre, appelido } = usuario;
 
         const data = {
           id,
           nombre,
+          appelido,
         };
 
         const token = jwt.sign(data, "secreto", {
@@ -28,6 +29,7 @@ const login = async (req, res) => {
           usuario: {
             id,
             nombre,
+            appelido,
             token,
           },
         });

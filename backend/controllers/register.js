@@ -4,12 +4,12 @@ const Usuario = require('../model/usuario');
 
 
 const register = (req, res) => {
-    const { nombre, correo, contraseña} = req.body;
+    const { nombre, apellido, correo, contraseña} = req.body;
     //metodo para registrar al usuario y revisar si ya existe en la base de datos
     Usuario.findOne({ correo }).then((usuario) => {
         if (usuario) {
           return res.json({ mensaje: "Usuario ya rgistrado" }); // si el usuario ya existe en la base de datos retorna un mensaje
-        } else if (!nombre || !correo || !contraseña) {
+        } else if (!nombre || !apellido ||!correo || !contraseña) {
           return res.json({ mensaje: "Revise que los campos tengan contenido" }); // si los campos estan vacios retorna un mensaje para revisar los campos
         } else {
           //metodo para encriptar la contraseña y agregar seguridad
@@ -18,6 +18,7 @@ const register = (req, res) => {
             else {
               const nuevoUsuario = new Usuario({
                 nombre,
+                apellido,
                 correo,
                 contraseña: contraseñaHasheada,
               });
