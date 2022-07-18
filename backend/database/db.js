@@ -1,6 +1,9 @@
 const mongooose = require('mongoose');
+require('dotenv').config();
+const PASS_DB = process.env.PASS_DB;
 
-const MONGO_URL = 'mongodb://localhost:27017/Knockgo';
+
+const MONGO_URL = 'mongodb+srv://Admin:'+PASS_DB+'@knockgo.yu0d9.mongodb.net/KnockGo';
 
 const db = async () => {
     await mongooose
