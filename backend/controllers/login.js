@@ -7,17 +7,17 @@ const login = async (req, res) => {
 
   Usuario.findOne({ correo }).then((usuario) => {
     if (!usuario) {
-      return res.json({ mensaje: "Usuario no existe" });  // si el usuario no existe en la base de datos retorna un mensaje
+      return res.json({ mensaje: "Verifique que los campos sean correctos" });  // si el usuario no existe en la base de datos retorna un mensaje
     }
     //metodo que compara la contraseña ingresada con la contraseña hasheada en la base de datos
     bcrypt.compare(contraseña, usuario.contraseña).then((esCorrecta) => {
       if (esCorrecta) {
-        const { id, nombre, appelido } = usuario;
+        const { id, nombre, apellido } = usuario;
 
         const data = {
           id,
           nombre,
-          appelido,
+          apellido,
         };
 
         const token = jwt.sign(data, "secreto", {
@@ -25,11 +25,11 @@ const login = async (req, res) => {
         });
 
         res.json({
-          mensaje: "Usuario logeado correctamente", // si la contraseña es correcta retorna un mensaje
+          mensaje: "Usuario logeado correctamente, bienvenido " + data.nombre +" "+ data.apellido+".", // si la contraseña es correcta retorna un mensaje
           usuario: {
             id,
             nombre,
-            appelido,
+            apellido,
             token,
           },
         });
